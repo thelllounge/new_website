@@ -1,11 +1,14 @@
+{% extends "base.html" %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% block head %}{% endblock %}
 </head>
 <body>
-    {% navbar %}
+    {% block navbar %}
     <p>This is a paragraph.</p>
+    {% endblock %}
+
 </body>
 </html>
