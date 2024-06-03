@@ -28,10 +28,12 @@ def title_generator():
 def wb_breaker():
     return render_template('wb_breaker.html')
 
+
 # Random Coding Stuff
 @app.route("/snake_game")
 def snake_game():
     return render_template('snake_game.html')
+
 
 @app.route("/language_typing")
 def language_typing():
@@ -41,6 +43,7 @@ def language_typing():
 @app.route("/language_mtg")
 def language_mtg():
     return render_template('language_mtg.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
