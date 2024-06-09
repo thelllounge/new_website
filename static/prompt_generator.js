@@ -1,3 +1,6 @@
+// let data = require("/prompts.json")
+// console.log(data)
+
 let characters = ["a man", "a woman", "a dog"]
 let settings = ["a house", "a forest", "a desert"]
 let problems = ["is hungry", "is tired", "is bored"]

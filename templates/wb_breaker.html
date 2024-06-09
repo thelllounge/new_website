@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+    {% block head %}
+    <script src="static/wb_breaker.js"></script>
+    {% endblock %}
     {% block body %}
-    <p>This is the future writer's block breaker.</p>
+    <h1>So, you're stuck?</h1>
+    <p id="action">This is the future writer's block breaker.</p>
+    <button onclick="breaker()">Help</button>
     {% endblock %}
