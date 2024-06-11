@@ -1,0 +1,42 @@
+.three{
+    animation-name: flashGreen;
+    animation-duration: 1s;
+}
+
+
+@keyframes flashGreen{
+    50% {
+        background-color: green;
+    }
+    100%{
+        background-color: var(--main-div-color);
+    }
+}
+
+.two{
+    animation-name: flashYellow;
+    animation-duration: 1s;
+}
+
+@keyframes flashYellow{
+    50% {
+        background-color: yellow;
+    }
+    100%{
+        background-color: var(--main-div-color);
+    }
+}
+
+.one{
+    animation-name: flashRed;
+    animation-duration: 1s;
+}
+
+@keyframes flashRed{
+    50% {
+        background-color: red;
+    }
+    100%{
+        background-color: var(--main-div-color);
+    }
+}

@@ -2,7 +2,9 @@
 
 {% block body %}
 <script src="static/prompt_generator.js"></script>
-<p>This is the future prompt generator.</p>
-<p id="prompt"></p>
-<button onclick="get_prompt()">Hello</button>
+<h1>Prompt Generator</h1>
+<p>If you're looking for something to write, but you can't think of an idea that sounds interesting now try this! Click the button below and you will be given a randomized prompt that will hopefully spark your interest.</p>
+<hr>
+<p id="prompt" class="card-text"></p>
+<button type="button" class="btn btn-sm btn-primary" onclick="get_prompt()">Prompt</button>
 {% endblock %}

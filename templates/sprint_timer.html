@@ -1,4 +1,47 @@
 {% extends "base.html" %}
+    {% block head %}
+    <link rel="stylesheet" href="sprint_timer.css">
+    {% endblock %}
     {% block body %}
-    <p>This is the future sprint timer.</p>
+    <div class="container noBorder">
+        <div id="timer">
+            <div id="dropdownMenus" class="noBorder">
+                <label for="select" class="noBorder">Sprint duration:</label>
+                <select name="select" id="select">
+                    <option value="Select a sprint time">Select a sprint time</option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+                <label for="rest">Rest duration:</label>
+                <select  name="rest" id="rest">
+                    <option value ="Select a rest time">Select a rest time</option>
+                    <option value="1">1</option>
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div id="timeDisplay" class="noBorder"><p>Please select a sprint and a rest time.</p></div>
+            <div id="sprintingOrResting" class="noBorder"></div>
+            <div id="buttons" class="noBorder">
+                <button id="startButton">Let's Start!</button>
+                <button id="resetButton">Reset</button>
+            </div>
+            <div id="accessibleFlashingDiv" class="noBorder">
+                <label for="accessibleFlashingDiv">Visual warnings:
+                    <input type="checkbox" id="accessibleFlashing" name="accessibleFlashing">
+                </label>
+            </div>
+            <div id="returnMain" class="noBorder">
+                <a href="index.html"><button>Home Page</button></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="static/sprint_timer.js"></script>
     {% endblock %}

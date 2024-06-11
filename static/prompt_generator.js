@@ -1,14 +1,222 @@
-// let data = require("/prompts.json")
-// console.log(data)
+let genres = [
+    "a science fiction",
+    "a horror",
+    "a fantasy",
+    "a historical",
+    "a comedy",
+    "a romance",
+    "a satire",
+    "an action",
+    "a spy fiction",
+    "a cloak and dagger",
+    "a military fiction",
+    "an adventure",
+    "a superhero fiction",
+    "a swashbuckler",
+    "a black comedy",
+    "an absurdist",
+    "a whodunit",
+    "a noir fiction",
+    "an urban fantasy",
+    "a dark fantasy",
+    "a science fantasy",
+    "a sword and sorcery",
+    "an alternate history",
+    "a period drama",
+    "a ghost",
+    "a survival horror",
+    "a paranormal romance",
+    "a space opera",
+    "a space western",
+    "an apocalyptic",
+    "a post-apocalyptic",
+    "a cyberpunk",
+    "a retropunk",
+    "a weird fiction",
+    "a thriller",
+    "a psychological thriller",
+    "a western",
+    "an urban fiction"
+]
+let genreURLs = [
+    "https://en.wikipedia.org/wiki/Science_fiction",
+    "https://en.wikipedia.org/wiki/Horror_fiction",
+    "https://en.wikipedia.org/wiki/Fantasy_literature",
+    "https://en.wikipedia.org/wiki/Historical_fiction",
+    "https://en.wikipedia.org/wiki/Comedy",
+    "https://en.wikipedia.org/wiki/Romance_novel",
+    "https://en.wikipedia.org/wiki/Satire",
+    "https://en.wikipedia.org/wiki/Action_fiction",
+    "https://en.wikipedia.org/wiki/Spy_fiction",
+    "https://en.wikipedia.org/wiki/Cloak_and_dagger",
+    "https://en.wikipedia.org/wiki/Military_fiction",
+    "https://en.wikipedia.org/wiki/Adventure_fiction",
+    "https://en.wikipedia.org/wiki/Superhero_fiction",
+    "https://en.wikipedia.org/wiki/Swashbuckler",
+    "https://en.wikipedia.org/wiki/Black_comedy",
+    "https://en.wikipedia.org/wiki/Absurdist_fiction",
+    "https://en.wikipedia.org/wiki/Whodunit",
+    "https://en.wikipedia.org/wiki/Noir_fiction",
+    "https://en.wikipedia.org/wiki/Urban_fantasy",
+    "https://en.wikipedia.org/wiki/Dark_fantasy",
+    "https://en.wikipedia.org/wiki/Science_fantasy",
+    "https://en.wikipedia.org/wiki/Sword_and_sorcery",
+    "https://en.wikipedia.org/wiki/Alternate_history",
+    "https://en.wikipedia.org/wiki/Historical_drama",
+    "https://en.wikipedia.org/wiki/Ghost_story",
+    "https://en.wikipedia.org/wiki/Survival_horror",
+    "https://en.wikipedia.org/wiki/Paranormal_romance",
+    "https://en.wikipedia.org/wiki/Space_opera",
+    "https://en.wikipedia.org/wiki/Space_Western",
+    "https://en.wikipedia.org/wiki/Apocalyptic_and_post-apocalyptic_fiction",
+    "https://en.wikipedia.org/wiki/Apocalyptic_and_post-apocalyptic_fiction",
+    "https://en.wikipedia.org/wiki/Cyberpunk",
+    "https://en.wikipedia.org/wiki/Retrofuturism",
+    "https://en.wikipedia.org/wiki/Weird_fiction",
+    "https://en.wikipedia.org/wiki/Thriller_(genre)",
+    "https://en.wikipedia.org/wiki/Psychological_thriller",
+    "https://en.wikipedia.org/wiki/Western_(genre)",
+    "https://en.wikipedia.org/wiki/Urban_fiction"
+]
+let settings = [
+    "in a metropolis",
+    "in a castle",
+    "on an island",
+    "in small city",
+    "in a hole that seems impossible to get out of",
+    "on a cruise boat",
+    "on an airplane",
+    "in a forest",
+    "on a mountain",
+    "at the base of a mountain",
+    "in an underwater research base",
+    "at the main character's job",
+    "in a restaurant",
+    "in a moving vehicle",
+    "in the nation's capital",
+    "in a graveyard",
+    "at a religious site",
+    "in captivity",
+    "in a small town",
+    "in the wilderness",
+    "in space",
+    "in a cave",
+    "on a stage",
+    "inside of a large creature"
+]
+let times = [
+    "in prehistoric times",
+    "in the distant past",
+    "in the recent past",
+    "in the present",
+    "in the near future",
+    "in the distant future",
+    "in an alternate timeline's present",
+    "in 1999",
+    "during the plague",
+    "in the 1960s",
+    "in 3027",
+    "during winter",
+    "during summer",
+    "during autumn",
+    "during spring",
+    "during an uprising",
+    "during times foretold by a prophet",
+    "during the worst storm of the century",
+    "right before the world ends",
+    "right after a war",
+    "during a time of peace",
+    "on their birthday",
+    "in a time loop",
+    "in the wake of a major world changing event"
+]
+let mainCharacters = [
+    "an elf",
+    "a teacher",
+    "a young child",
+    "someone who is lost",
+    "someone who recently lost something dear to them",
+    "a teenager",
+    "a business owner",
+    "someone with a secret",
+    "an adult",
+    "your favorite animal",
+    "your favorite animal anthropomorphized",
+    "an alien",
+    "someone from the future",
+    "someone from the past",
+    "someone who has been living alone for 30 years and has come back to society to find everything has changed",
+    "an angel",
+    "a demon",
+    "some unspeakable horror",
+    "a fairy",
+    "what your dreams are made of",
+    "what your nightmares are made of",
+    "someone with a lot of body modifications",
+    "someone that hates animals",
+    "someone that has nothing left to lose"
+]
+let goals = [
+    "trying to find something they lost",
+    "trying to right a wrong they did to someone else",
+    "trying to right a wrong someone else did",
+    "trying to find an important item for a quest",
+    "trying to fulfill a prophecy about them",
+    "trying just to get through life without too much trouble, but somehow trouble always seems to find them",
+    "trying to teach someone a new skill",
+    "trying to kill someone",
+    "trying to avoid being killed",
+    "trying to get a new job",
+    "trying to study something",
+    "trying to discover a secret",
+    "trying to discover something that has been lost to time",
+    "trying to find a new lover",
+    "trying to leave an old lover",
+    "trying to buy something",
+    "trying to fight for a cause they believe in",
+    "trying to get out of a bad situation",
+    "trying to deliver an item to another location",
+    "trying to discover the truth about their situation",
+    "trying to discover the truth about the past",
+    "trying to find the cure to something",
+    "trying to convince the world they're right",
+    "trying to get home"
+]
+let conflicts = [
+    "someone is standing in their way",
+    "they have forgotten everything",
+    "they've lost the things they need",
+    "someone near them has died",
+    "their closest friend has become their enemy",
+    "their enemy is reaching out for help",
+    "they are questioning their beliefs",
+    "they suffered a huge defeat",
+    "they are having trouble mentally",
+    "they are very hurt",
+    "something feels wrong",
+    "they can't figure out what their first step is",
+    "they've lost all their money",
+    "someone has discovered their plans",
+    "they just don't feel like it",
+    "they don't know how to do what they need to do"
+]
 
-let characters = ["a man", "a woman", "a dog"]
-let settings = ["a house", "a forest", "a desert"]
-let problems = ["is hungry", "is tired", "is bored"]
-let times = ["in present day", "in the past", "in the future", "in an alternate timeline"]
 
 function get_prompt() {
-    document.getElementById("prompt").innerHTML = `Character: ${characters[Math.floor(Math.random() * characters.length)]}<br> 
-    Setting: ${settings[Math.floor(Math.random() * settings.length)]}<br>
-    Problem: ${problems[Math.floor(Math.random() * problems.length)]}<br>
-    Time: ${times[Math.floor(Math.random() * times.length)]}`
+    let genreNumber = Math.floor(Math.random() * genres.length)
+    let genre = genres[genreNumber]
+    let genreURL = genreURLs[genreNumber]
+    let setting = settings[Math.floor(Math.random() * settings.length)]
+    let time = times[Math.floor(Math.random() * times.length)]
+    let mainCharacter = mainCharacters[Math.floor(Math.random() * mainCharacters.length)]
+    let goal = goals[Math.floor(Math.random() * goals.length)]
+    let conflict = conflicts[Math.floor(Math.random() * conflicts.length)]
+
+
+
+    document.getElementById("prompt").innerHTML = `Your main character should be ${mainCharacter}. <br><br>
+    They should be ${goal} but ${conflict}. <br><br>
+    It should be set ${setting} ${time}. <br><br>
+    It should be <a href="${genreURL}" target="_blank">${genre}</a> story.</p>
+`
 }
