@@ -1,3 +1,7 @@
+body {
+--main-div-color: white;
+}
+
 .three{
     animation-name: flashGreen;
     animation-duration: 1s;
